@@ -29,6 +29,8 @@ class Program
         if (files.Length == 0)
         {
             Console.WriteLine("No Spotlight images found. Make sure Windows Spotlight is enabled.");
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
             return;
         }
 
@@ -52,5 +54,7 @@ class Program
         }
 
         Console.WriteLine($"Done! {copiedFiles} new Spotlight images saved in: {destinationPath}");
+        Console.WriteLine("\nPress any key to exit...");
+        Console.ReadKey();
     }
 }

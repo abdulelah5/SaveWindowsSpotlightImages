@@ -27,10 +27,7 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 # Ignore bin contents (not the directory itself) so negation patterns work
-[Bb]in/*
-# Allow bin/Release so users can grab the pre-built app
-!**/[Bb]in/[Rr]elease/
-!**/[Bb]in/[Rr]elease/**
+[Bb]in/
 [Oo]bj/
 [Oo]ut/
 [Ll]og/
@@ -181,8 +178,6 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
-!**/[Bb]in/[Rr]elease/**/publish/
-!**/[Bb]in/[Rr]elease/**/publish/**
 
 # Publish Web Output
 *.[Pp]ublish.xml
