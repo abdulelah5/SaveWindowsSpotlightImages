@@ -19,7 +19,6 @@ mono_crash.*
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
 [Rr]eleases/
 x64/
 x86/
@@ -27,7 +26,11 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
+# Ignore bin contents (not the directory itself) so negation patterns work
+[Bb]in/*
+# Allow bin/Release so users can grab the pre-built app
+!**/[Bb]in/[Rr]elease/
+!**/[Bb]in/[Rr]elease/**
 [Oo]bj/
 [Oo]ut/
 [Ll]og/
@@ -178,6 +181,8 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
+!**/[Bb]in/[Rr]elease/**/publish/
+!**/[Bb]in/[Rr]elease/**/publish/**
 
 # Publish Web Output
 *.[Pp]ublish.xml
